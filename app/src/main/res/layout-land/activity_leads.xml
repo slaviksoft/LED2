@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LeadsActivity">
+
+    <include layout="@layout/app_toolbar" android:id="@+id/app_toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/app_toolbar"
+        android:orientation="horizontal">
+
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:name="ru.yomu.slaviksoft.led2.LeadsListFragment"
+            android:id="@+id/container"
+            tools:layout="@layout/fragment_leads_list"
+            android:layout_weight="30"
+            >
+        </fragment>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="70"
+            android:id="@+id/details">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
